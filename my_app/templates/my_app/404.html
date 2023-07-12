@@ -1,0 +1,44 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block css %}
+    <style>
+        * {
+    margin: 0;
+    }
+
+
+    .container {
+        width: 80%;
+        height: 100vh;
+        float: right;
+        background-color: #ffffff;
+
+
+    }
+    .container_img {
+        position: fixed;
+        top: 50%;
+        right: 25%;
+        transform: translateY(-50%);
+        max-width: 80%;
+
+    }
+
+
+    .pnf404 {
+        width: 400px;
+        height: 400px;
+    }
+    </style>
+{% endblock %}
+
+{% block title %}error 404{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="container_img" style="background-color: red;">
+            <img src="{% static 'my_app/img/404_error.jpeg' %}" class="pnf404">
+        </div>
+    </div>
+{% endblock %}

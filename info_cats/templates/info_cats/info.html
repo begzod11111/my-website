@@ -1,0 +1,35 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'info_cats/css/info.css' %}">
+{% endblock %}
+
+{% block title %}info{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% for i in content %}
+            <div class="info_block">
+                {% if i.font.url != "" %}
+                    <div class="wrapper" style="background-image: url({{ i.font.url }});" onclick="location.href='{{ i.get_absolute_url }}'">
+                {% else %}
+                    <div class="wrapper" style="background-image: url({% static 'info_cats/default/default.jpeg' %});" onclick="location.href='{{ i.get_absolute_url }}'">
+                {% endif %}
+
+                    <div class="info">
+                        <div class="text_info">
+                            {{ i.title }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% if request.user.is_authenticated %}
+        <a class="add" href="{% url 'add_article' %}" style="background-image: url({% static 'info_cats/img/add-icon.png' %});"></a>
+    {% else %}
+        <p></p>
+{#         <a class="add" href="{% url 'reg' %}" style="background-image: url({% static 'info_cats/img/add-icon.png' %});"></a>#}
+    {% endif %}
+{% endblock %}
+

@@ -1,0 +1,20 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'my_app/css/home.css' %}">
+{% endblock %}
+{% block title %}home{% endblock %}
+{% block content %}
+    <div class="alpha">
+        <img src="{% static 'my_app/img/cat-font.jpg' %}" class="font">
+        <div class="text_site">
+            <h1 class="h1_site" >catWorld</h1>
+            <p class="h1_site">Are you just thinking about getting a pet, or have you already made a new friend, but don't know how to properly care for him? You will find the necessary minimum advice in the articles of our experts.</p>
+            <a class="button" href="#">more</a>
+        </div>
+    </div>
+{% endblock %}
+
+
+

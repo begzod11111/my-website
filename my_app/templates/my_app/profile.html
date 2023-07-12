@@ -1,0 +1,15 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'my_app/css/profile.css' %}">
+{% endblock %}
+{% block title %}profile{% endblock %}
+
+{% block content %}
+    <main>
+    <section class="profile">
+      <h2>Профиль пользователя</h2>
+    </section>
+  </main>
+{% endblock %}

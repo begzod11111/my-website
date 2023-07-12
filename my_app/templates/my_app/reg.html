@@ -1,0 +1,27 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'my_app/css/reg.css' %}">
+{% endblock %}
+{% block title %}profile{% endblock %}
+
+{% block content %}
+
+<div class="form-container">
+  <form method="post" enctype="multipart/form-data" class="form-add-user" action="">
+    {% csrf_token %}
+      {% for i in form %}
+        {{i}}
+        <div>
+          {{ i.errors }}
+        </div>
+      {% endfor %}
+    <button type="submit" class="btn btn-primary">Отправить</button>
+  </form>
+  <div>
+    {{ form.non_field_errors }}
+  </div>
+</div>
+{% endblock %}
+

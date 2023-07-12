@@ -1,0 +1,15 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'info_cats/css/articles.css' %}">
+{% endblock %}
+
+{% block title %}info{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ a.title }}</h1>
+        <p>{{ a.text }}</p>
+    </div>
+{% endblock %}

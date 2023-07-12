@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+}
+
+header {
+    font-family: 'Alkatra', cursive;
+    position: fixed;
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.logo_head {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-image: url(../img/logo.png);
+}
+
+.logo_head_text {
+    font-family: 'Alkatra', cursive;
+    cursor: default;
+    color: #000000;
+    font-size: 30px;
+    padding-left: 90px;
+    padding-top: 20px;
+    padding-bottom: 65px;
+}
+
+.list_head {
+    list-style: none;
+    padding-left: 0;
+    margin: 0px;
+}
+
+.a_head {
+    font-weight: bold;
+    font-size: 20px;
+    width: 40%;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    transition: all, .2s ease;
+    border-bottom: 2px solid #ffffff;
+
+}
+
+.a_head:hover {
+    border-color: rgb(0, 0, 0);
+    transform: translateX(20px);
+}
+
+
+.gif {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 25%;
+    bottom: 1%;
+}
+
+
+
+
+

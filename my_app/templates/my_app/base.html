@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'my_app/css/head.css' %}">
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="logo">
+         <a class="logo_head" href="{% url 'home' %}"></a>
+         <h1 class="logo_head_text">catWorld</h1>
+        </div>
+        <nav>
+         <ul class="list_head">
+           <li><a href="#" class="a_head">Profile</a></li>
+           <li><a href="#" class="a_head">Cats</a></li>
+           <li><a href="{% url 'info_cats' %}" class="a_head">Information</a></li>
+           <li><a href="#" class="a_head">Сonsultation</a></li>
+           <li><a href="#" class="a_head">About</a></li>
+         </ul>
+        </nav>
+        <div class="gif">
+            <img src="{% static 'my_app/img/cat.gif' %}" alt="error">
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
